@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+
+    <style>
+        /* -------- Global Reset & Base Styles -------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 40px;
+            background-color: #f4f6f8;
+        }
+
+        /* -------- Profile Card -------- */
+        .profile-card {
+            background-color: #ffffff;
+            width: 320px;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* -------- Profile Image -------- */
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* -------- Typography -------- */
+        .name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .designation {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .bio {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* -------- Social Icons -------- */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .icon-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .icon-button:hover {
+            background-color: #d0d7de;
+        }
+
+        .icon-button img {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-card">
+        <img
+            src="/home/ameen-khan/Frontend-Fundamentals/profile-photo.jpg   "
+            alt="Profile Photo"
+            class="profile-image"
+        />
+
+        <h2 class="name">Rahul Sharma</h2>
+        <p class="designation">Frontend Developer</p>
+
+        <p class="bio">
+            Passionate about building clean and user-friendly web interfaces.
+            Always learning and improving.
+        </p>
+
+        <div class="social-icons">
+            <button class="icon-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+            </button>
+            <button class="icon-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Twitter" />
+            </button>
+            <button class="icon-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" />
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

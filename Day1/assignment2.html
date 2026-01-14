@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Grid</title>
+
+    <style>
+        /* ---------- Global Reset ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 40px;
+        }
+
+        /* ---------- Pricing Grid ---------- */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* ---------- Pricing Card ---------- */
+        .pricing-card {
+            background-color: #ffffff;
+            padding: 24px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ---------- Recommended Plan ---------- */
+        .pricing-card.recommended {
+            border: 2px solid #2563eb;
+            transform: scale(1.05);
+        }
+
+        .badge {
+            background-color: #2563eb;
+            color: #ffffff;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 999px;
+            width: fit-content;
+            margin-bottom: 12px;
+        }
+
+        /* ---------- Typography ---------- */
+        .plan-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        /* ---------- Features ---------- */
+        .features {
+            list-style: none;
+            margin-bottom: 24px;
+            flex-grow: 1; /* Ensures equal height cards */
+        }
+
+        .features li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        /* ---------- CTA Button ---------- */
+        .cta-button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #1e40af;
+        }
+
+        .cta-button.secondary {
+            background-color: #e5e7eb;
+            color: #111827;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: #d1d5db;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pricing-grid">
+
+        <!-- Free Plan -->
+        <div class="pricing-card">
+            <h2 class="plan-title">Free</h2>
+            <p class="price">$0</p>
+
+            <ul class="features">
+                <li>1 user</li>
+                <li>Basic Support</li>
+                <li>Access Community</li>
+            </ul>
+
+            <button class="cta-button secondary">Sign Up</button>
+        </div>
+
+        <!-- Pro Plan (Recommended) -->
+        <div class="pricing-card recommended">
+            <h2 class="plan-title">Pro</h2>
+            <p class="price">$29</p>
+
+            <ul class="features">
+                <li>Upto 5 users</li>
+                <li>Email support</li>
+                <li>Advance analytics</li>
+            </ul>
+
+            <button class="cta-button">Get Started</button>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card">
+            <h2 class="plan-title">Enterprise</h2>
+            <p class="price">$99</p>
+
+            <ul class="features">
+                <li>Unlimited Users</li>
+                <li>Priority Support</li>
+                <li>Custom Solutions</li>
+            </ul>
+
+            <button class="cta-button secondary">Contact Us</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
